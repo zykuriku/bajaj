@@ -15,17 +15,22 @@ public class WebSeries {
     private String description;
     @Column
     private double rating;
-//    private List<String> platformsFree;
-//    private List<String> allPlatforms;
+    @ElementCollection(fetch = FetchType.EAGER)
+    private List<String> platformsFree;
+    @ElementCollection(fetch = FetchType.EAGER)
+    private List<String> allPlatforms;
     @Column
     private String genre;
     @Column
     private int year;
     @Column
     private int seasons;
-//    private List<Integer> episodesPerSeason;
-//    private List<String> languages;
-//    private List<String> cast;
+    @ElementCollection(fetch = FetchType.EAGER)
+    private List<Integer> episodesPerSeason;
+    @ElementCollection(fetch = FetchType.EAGER)
+    private List<String> languages;
+    @ElementCollection(fetch = FetchType.EAGER)
+    private List<String> cast;
 //    private List<String> creators;
 
 
