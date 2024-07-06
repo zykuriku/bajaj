@@ -47,9 +47,9 @@ public class WebSeries {
         return rating;
     }
 
-//    public List<String> getPlatformsFree() {
-//        return platformsFree;
-//    }
+    public List<String> getPlatformsFree() {
+        return platformsFree;
+    }
 //
 //    public List<String> getAllPlatforms() {
 //        return allPlatforms;
