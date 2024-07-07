@@ -1,7 +1,5 @@
-
-# Package stage
-#
 FROM openjdk:22
-COPY target/api-0.0.1-SNAPSHOT.jar api-0.0.1-SNAPSHOT.jar
-
-ENTRYPOINT ["java","-jar","/api-0.0.1-SNAPSHOT.jar"]
+WORKDIR /api
+COPY ${JAR_FILE} api.jar
+EXPOSE 8080
+ENTRYPOINT ["java","-jar","api-0.0.1-SNAPSHOT.jar"]
