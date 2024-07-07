@@ -31,7 +31,7 @@ public class WebSeries {
     private List<String> languages;
     @ElementCollection(fetch = FetchType.EAGER)
     private List<String> cast;
-//    private List<String> creators;
+
 
 
 
@@ -50,10 +50,10 @@ public class WebSeries {
     public List<String> getPlatformsFree() {
         return platformsFree;
     }
-//
-//    public List<String> getAllPlatforms() {
-//        return allPlatforms;
-//    }
+
+    public List<String> getAllPlatforms() {
+        return allPlatforms;
+    }
 
     public String getGenre() {
         return genre;
@@ -67,21 +67,18 @@ public class WebSeries {
         return seasons;
     }
 
-//    public List<Integer> getEpisodesPerSeason() {
-//        return episodesPerSeason;
-//    }
-//
-//    public List<String> getLanguages() {
-//        return languages;
-//    }
-//
-//    public List<String> getCast() {
-//        return cast;
-//    }
-////
-//    public List<String> getCreators() {
-//        return creators;
-//    }
+    public List<Integer> getEpisodesPerSeason() {
+        return episodesPerSeason;
+    }
+
+    public List<String> getLanguages() {
+        return languages;
+    }
+
+    public List<String> getCast() {
+        return cast;
+    }
+
 
     public void setId(int id) {
         this.id = id;
@@ -96,13 +93,13 @@ public class WebSeries {
         this.rating = rating;
 
     }
-//    public void setPlatformsFree(List<String> platformsFree) {
-//        this.platformsFree = platformsFree;
-//    }
-//
-//    public void setAllPlatforms(List<String> allPlatforms) {
-//        this.allPlatforms = allPlatforms;
-//    }
+    public void setPlatformsFree(List<String> platformsFree) {
+        this.platformsFree = platformsFree;
+    }
+
+    public void setAllPlatforms(List<String> allPlatforms) {
+        this.allPlatforms = allPlatforms;
+    }
     public void setGenre(String genre) {
 
         this.genre = genre;
@@ -114,19 +111,16 @@ public class WebSeries {
         this.seasons = seasons;
 
     }
-//    public void setEpisodesPerSeason(List<Integer> episodesPerSeason) {
-//        this.episodesPerSeason = episodesPerSeason;
-//    }
-//    public void setLanguages(List<String> languages) {
-//        this.languages = languages;
-//    }
-//    public void setCast(List<String> cast) {
-//        this.cast = cast;
-//
-//    }
-//    public void setCreators(List<String> creators) {
-//        this.creators = creators;
-//    }
+    public void setEpisodesPerSeason(List<Integer> episodesPerSeason) {
+        this.episodesPerSeason = episodesPerSeason;
+    }
+    public void setLanguages(List<String> languages) {
+        this.languages = languages;
+    }
+    public void setCast(List<String> cast) {
+        this.cast = cast;
+
+    }
 
     public void setId(Long id) {
         this.id = Math.toIntExact(id);

@@ -48,5 +48,11 @@ public class ApiControllers {
         return "updated..";
     }
 
+    public String deleteSeries(@PathVariable long id){
+        WebSeries deletedSeries = seriesRepo.findById(id).get();
+        seriesRepo.deleteById(id);
+        return "Delete series with id: "+id;
+    }
+
 
 }
