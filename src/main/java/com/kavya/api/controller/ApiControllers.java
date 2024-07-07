@@ -33,7 +33,7 @@ public class ApiControllers {
     }
 
 
-    @GetMapping(value = "/series/name={name}")
+    @GetMapping(value = "/series/{name}")
     public ResponseEntity<WebSeries> getSeriesByName(@PathVariable String name) {
         Optional<WebSeries> series = seriesRepo.findByName(name);
         return series.map(ResponseEntity::ok)
@@ -47,7 +47,7 @@ public class ApiControllers {
         return "saved..";
     }
 
-    @PutMapping(value = "/update/id={id}")
+    @PutMapping(value = "/update/{id}")
     public String updateSeries(@PathVariable long id, @RequestBody WebSeries series){
         WebSeries updatedSeries= seriesRepo.findById(id).get();
         updatedSeries.setDescription(series.getDescription());
@@ -64,7 +64,7 @@ public class ApiControllers {
         seriesRepo.save(series);
         return "updated..";
     }
-    @DeleteMapping(value = "/delete/id={id}")
+    @DeleteMapping(value = "/delete/{id}")
 
     public String deleteSeries(@PathVariable long id){
         WebSeries deletedSeries = seriesRepo.findById(id).get();
