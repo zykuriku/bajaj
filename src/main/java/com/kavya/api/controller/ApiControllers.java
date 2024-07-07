@@ -4,6 +4,7 @@ package com.kavya.api.controller;
 import com.kavya.api.models.WebSeries;
 import com.kavya.api.repo.SeriesRepo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -31,12 +32,12 @@ public class ApiControllers {
         return all;
     }
 
+
     @GetMapping(value = "/series/name={name}")
-
-    public WebSeries getSeriesByName(@PathVariable String name)
-    {
-
-        return seriesRepo.findByName(name);
+    public ResponseEntity<WebSeries> getSeriesByName(@PathVariable String name) {
+        Optional<WebSeries> series = seriesRepo.findByName(name);
+        return series.map(ResponseEntity::ok)
+                .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
 

@@ -8,5 +8,5 @@ import java.util.Optional;
 
 public interface SeriesRepo extends JpaRepository<WebSeries, Long> {
 
-    WebSeries findByName(String name);
+    Optional<WebSeries> findByName(String name);
 }
