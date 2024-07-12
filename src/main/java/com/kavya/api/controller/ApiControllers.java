@@ -21,15 +21,14 @@ public class ApiControllers {
     @GetMapping(value = "/")
     public String getPage()
     {
-        return "Welcome to Wpick API wherein you can have fun with loads of international and Indian Web Series!";
+        return "Welcome to Wpick API!";
     }
 
     @GetMapping(value = "/series")
 
     public List<WebSeries> getSeries()
     {
-        List<WebSeries> all = seriesRepo.findAll();
-        return all;
+        return seriesRepo.findAll();
     }
 
 
