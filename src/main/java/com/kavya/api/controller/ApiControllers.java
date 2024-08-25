@@ -32,9 +32,9 @@ public class ApiControllers {
     }
 
 
-    @GetMapping(value = "/series/{name}")
-    public ResponseEntity<Info> getSeriesByName(@PathVariable String name) {
-        Optional<Info> series = seriesRepo.findByName(name);
+    @GetMapping(value = "/bfhl/{id}")
+    public ResponseEntity<Info> getSeriesByName(@PathVariable int id) {
+        Optional<Info> series = seriesRepo.findById(id);
         return series.map(ResponseEntity::ok)
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }

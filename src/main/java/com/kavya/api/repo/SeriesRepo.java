@@ -8,5 +8,5 @@ import java.util.Optional;
 
 public interface SeriesRepo extends JpaRepository<Info, Long> {
 
-    Optional<Info> findByName(String name);
+    Optional<Info> findById(int id);
 }
